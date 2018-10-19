@@ -11,6 +11,6 @@ gulp.task("serv", function() {
   browserSync.watch("./docs/**/*", browserSync.reload);
 });
 
-gulp.task("default", ["serv"], function() {
-  gulp.watch("./**/*", browserSync.reload);
+gulp.task("default", "serv", function() {
+  gulp.watch("./docs/**/*", browserSync.reload);
 });
