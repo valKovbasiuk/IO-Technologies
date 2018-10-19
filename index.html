@@ -19,30 +19,57 @@
             <div class="main__container">
                 <span class="message">Get how to help and instructions or specific features in
                     <br>
-
-
                     <a class="link-button" href="#">help center</a>
                     <span>or</span>
                     <a href="#" class="link-button">support</a>
                 </span>
             </div>
         </div>
-
     </main>
     <aside class="aside">
-        <form class="aside__inner form" action="submit">
-            <p class="form__greeting">Welcome back</p>
-            <p class="form__message">Sign in to contine to IO Technologies.</p>
-            <div class="form__field-box">
-                <input class="form__text-input" type="email" placeholder="Your email" required>
-                <input class="
-                form__text-input" type="password" placeholder="password" required>
-                <button class="form__button"> <span>log in <img src="./img/right-arrow.png" alt="arrow"></span></button>
-            </div>
-            <span class="form__message">Forgot your password? <a class="link" href="#">Reset</a></span>
-        </form>
+        <div class="slider">
+            <div class="slider__content">
+                <form id="login" class="form slider__element" action="submit" method="post" novalidate>
+                    <p class="form__greeting">Welcome back</p>
+                    <p class="form__message">Sign in to contine to IO Technologies.</p>
+                    <div class="form__field-box">
+                        <div class="input__container">
+                            <input id="email" class="form__text-input form__text-input--error" name="email" type="email"
+                                placeholder="Your email" required>
+                            <div class="error__message" id="log_error_mail">Oops! You've entered an invalid
+                                email</div>
+                        </div>
+                        <div class="input__container">
+                            <input id="password" class="
+                                            form__text-input"
+                                name="password" type="password" placeholder="password" required>
+                            <div class="error__message hidden" id="log_error_pass">Password cannot be blanc</div>
+                        </div>
 
+                        <button class="form__button"> <span>log in <img class="form__button--image" src="./img/right-arrow.png"
+                                    alt="arrow"></span></button>
+                    </div>
+                    <span class="form__message">Forgot your password? <a class="link" onclick="shift()">Reset</a></span>
+                </form>
+                <form id="recover" class="form slider__element" action="submit" method="post" novalidate>
+                    <button type="button" class="btn--return" onclick="shift()">
+                        <img class="return-img" src="./img/right-arrow.png" alt="return">
+                    </button>
+                    <p class="form__greeting">Forgot password?</p>
+                    <div class="form__field-box">
+                        <div class="input__container">
+                            <input id="email" class="form__text-input" name="email" type="email" placeholder="Your email"
+                                required>
+                            <div class="error__message hidden" id="recover_error_mail">Oops! You've entered an invalid
+                                email</div>
+                        </div>
+                        <button class="form__button"> <span>send me instructions</span></button>
+                    </div>
+                </form>
+            </div>
+        </div>
     </aside>
+    <script src="./main.js"></script>
 </body>
 
 </html>
